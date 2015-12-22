@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hola_mundo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,95 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OH6-xF-wHh">
+                                <rect key="frame" x="91" y="61" width="32" height="30"/>
+                                <state key="normal" title="Hola">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="holaPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gyC-x9-M2e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlI-ap-Hdc">
+                                <rect key="frame" x="481" y="61" width="48" height="30"/>
+                                <state key="normal" title="Mundo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="mundoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QXr-Sx-ghh"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="hybrid" translatesAutoresizingMaskIntoConstraints="NO" id="5Jv-Fy-D5E">
+                                <rect key="frame" x="31" y="155" width="536" height="349"/>
+                            </mapView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="R9j-E6-kbI">
+                                <rect key="frame" x="29" y="99" width="540" height="31"/>
+                                <connections>
+                                    <action selector="sliderMoved:" destination="BYZ-38-t0r" eventType="valueChanged" id="tgc-29-i9X"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lN1-qZ-ccQ">
+                                <rect key="frame" x="265" y="550" width="68" height="30"/>
+                                <state key="normal" title="Piramides">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="piramides:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bxc-52-SKi"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola Mundo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WpJ-Ph-KeZ">
+                                <rect key="frame" x="248" y="28" width="103" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="1Aj-w8-V7K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="1Aj-w8-V7K"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact">
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.80000001192092896" green="1" blue="0.40000000596046448" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="dlI-ap-Hdc" secondAttribute="trailing" constant="51" id="0t0-zE-HYL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lN1-qZ-ccQ" secondAttribute="bottom" constant="20" id="Fq0-Wf-HJV">
+                                <variation key="widthClass=compact" constant="14"/>
+                            </constraint>
+                            <constraint firstItem="lN1-qZ-ccQ" firstAttribute="centerX" secondItem="WpJ-Ph-KeZ" secondAttribute="centerX" id="H1H-RT-2Q0"/>
+                            <constraint firstItem="OH6-xF-wHh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="HA3-gb-oSy"/>
+                            <constraint firstItem="WpJ-Ph-KeZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Hx2-Ub-7Be"/>
+                            <constraint firstItem="R9j-E6-kbI" firstAttribute="top" secondItem="dlI-ap-Hdc" secondAttribute="bottom" constant="8" id="IFC-cO-D9k"/>
+                            <constraint firstItem="5Jv-Fy-D5E" firstAttribute="top" secondItem="R9j-E6-kbI" secondAttribute="bottom" constant="26" id="J3f-Sj-6VL"/>
+                            <constraint firstItem="R9j-E6-kbI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Nu3-EN-2Ah"/>
+                            <constraint firstItem="lN1-qZ-ccQ" firstAttribute="top" secondItem="5Jv-Fy-D5E" secondAttribute="bottom" constant="46" id="PcI-7S-CbZ">
+                                <variation key="widthClass=compact" constant="17"/>
+                            </constraint>
+                            <constraint firstItem="5Jv-Fy-D5E" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="11" id="Zk1-iG-xOs"/>
+                            <constraint firstItem="dlI-ap-Hdc" firstAttribute="top" secondItem="WpJ-Ph-KeZ" secondAttribute="bottom" constant="10" id="cKw-od-6l4"/>
+                            <constraint firstItem="OH6-xF-wHh" firstAttribute="top" secondItem="WpJ-Ph-KeZ" secondAttribute="bottom" constant="10" id="d2c-50-Hkr"/>
+                            <constraint firstItem="WpJ-Ph-KeZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eBb-V6-uPB"/>
+                            <constraint firstItem="OH6-xF-wHh" firstAttribute="centerY" secondItem="dlI-ap-Hdc" secondAttribute="centerY" id="fce-Dx-F1z"/>
+                            <constraint firstItem="R9j-E6-kbI" firstAttribute="centerX" secondItem="WpJ-Ph-KeZ" secondAttribute="centerX" id="k9D-wR-1ex"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Jv-Fy-D5E" secondAttribute="trailing" constant="13" id="uXE-PS-2sj"/>
+                            <constraint firstItem="R9j-E6-kbI" firstAttribute="top" secondItem="OH6-xF-wHh" secondAttribute="bottom" constant="8" id="wHJ-P4-NGx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="map" destination="5Jv-Fy-D5E" id="yhA-dl-ahg"/>
+                        <outlet property="msg" destination="WpJ-Ph-KeZ" id="tV7-Eg-Wgq"/>
+                        <outlet property="slider" destination="R9j-E6-kbI" id="Djn-nO-Ja8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="219" y="355"/>
         </scene>
     </scenes>
 </document>
