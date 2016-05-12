@@ -1,3 +1,3 @@
 # Hello-world-xcode
 xcode P1
-Hello world for ios terminals
+Hello world for iOS terminals
